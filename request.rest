@@ -1,0 +1,46 @@
+GET http://localhost:6000/Goods/1
+
+
+###
+POST http://localhost:6000/Goods
+Content-Type: application/json
+
+{
+
+    "trademark": "ZTE",
+    "type": "ZTE",
+    "serialNumber": "ZTE"
+}
+
+###
+PATCH http://localhost:6000/Goods/3
+Content-Type: application/json
+
+{
+    "trademark": "ZTE",
+    "type": "F670L",
+    "serialNumber": "ZTE3124"
+}
+
+###
+DELETE http://localhost:6000/Goods/4
+
+### CREATE USERS
+POST http://localhost:1104/users 
+Content-Type: application/json
+{
+    "name": "fahmi",
+    "email": "fahmifaza6@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+### 
+GET http://localhost:1104/me 
+###
+POST http://localhost:1104/login
+Content-Type: application/json
+{
+    "email": "fahmifaza6@gmail.com",
+    "password": "123456",
+}
