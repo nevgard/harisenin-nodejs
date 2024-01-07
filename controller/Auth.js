@@ -20,7 +20,7 @@ module.exports.login = async (req, res) => {
 
 module.exports.me = async (req, res) => {
   if (!req.session.userId) {
-    return res.status(401).json({ msg: "Unauthorized" });
+    return res.status(401).json({ msg: "Please Login First" });
   }
   const user = await User.findOne({
     attributes: ["uuid", "name", "email", "role"],

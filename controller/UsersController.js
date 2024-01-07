@@ -16,7 +16,7 @@ module.exports.getUserById = async (req, res) => {
     const response = await User.findOne({
       attributes: ["uuid", "name", "email", "role"],
       where: {
-        id: req.params.id,
+        uuid: req.params.id,
       },
     });
     res.status(200).json(response);
